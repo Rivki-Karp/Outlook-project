@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Submit Your Files</h1>
+        <form id="uploadForm">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="fullName" name="FullName" required placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="email" name="Email" required placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label>Notes</label>
+                <textarea id="notes" name="Notes" placeholder="Optional notes"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Files</label>
+                <input type="file" id="filesInput" name="files" multiple>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+        
+        <div id="message" class="message"></div>
+        
+    </div>
+
+    <script type="module" src="upload.js"></script>
+</body>
+</html>
